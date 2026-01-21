@@ -16,8 +16,16 @@ conn.close()
 records_df = pd.DataFrame(records,columns=['id','city','name'])
 print(records_df['city'])
 
-# other way to do this
+# WAYS TO MANIPULATE DATA
+# make list of cities and print them
 citynames = []
 for record in records:
     citynames.append(record[1])
 print(citynames)
+
+# make list of tuples of how many characters are in each city and team name
+citylen = []
+for record in records:
+    chars = (len(record[1]),len(record[2]))
+    citylen.append(chars)
+print(citylen)
