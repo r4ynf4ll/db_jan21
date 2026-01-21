@@ -1,6 +1,6 @@
 import sqlite3
 conn = sqlite3.connect('playoffs.db')
-cursor = conn.cursor
+cursor = conn.cursor()
 
 query = """
     INSERT INTO teams(city,name)
